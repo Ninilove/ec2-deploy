@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: "Simple CloudFormation template for creating an EC2 instance in us-west-1"
+
+Resources:
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-015e832ac6a60f0de  # Specify the desired AMI ID
+      InstanceType: t2.micro
+      KeyName: YourKeyPairName      # Replace with your key pair name
+      Tags:
+        - Key: Name
+          Value: "Nina Ngouabou"
+      AvailabilityZone: us-west-1a   # Specify the desired availability zone
+
+Outputs:
+  InstanceId:
+    Description: "EC2 Instance ID"
+    Value: !Ref EC2Instance
