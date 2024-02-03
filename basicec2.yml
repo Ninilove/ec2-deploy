@@ -8,7 +8,6 @@ Resources:
     Properties:
       ImageId: ami-015e832ac6a60f0de  # Specify the desired AMI ID
       InstanceType: t2.micro
-      KeyName: YourKeyPairName      # Replace with your key pair name
       Tags:
         - Key: Name
           Value: "Nina Ngouabou"
